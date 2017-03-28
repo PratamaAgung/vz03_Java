@@ -4,18 +4,18 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class BekantanTest {
+public class KancilTest {
 
 	@Test
-	public void testBekantan() {
-		Bekantan o = new Bekantan(1, 10, 1, 100, true);
-
-		assertEquals(10, o.getJmlMakanan());
+	public void testKancil() {
+		Kancil o = new Kancil(1, 10, 1, 100, true);
+		  
+		assertEquals(50, o.getJmlMakanan());
 		assertEquals(1, o.getID());
 		assertEquals(true, o.isJinak());
 		assertEquals(10, o.getPosisiX());
 		assertEquals(1, o.getPosisiY());
-		assertEquals('B', o.getInisial());
+		assertEquals('K', o.getInisial());
 	}
 
 }
