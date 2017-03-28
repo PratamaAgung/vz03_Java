@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 package animal;
 
 import static org.junit.Assert.*;
@@ -5,16 +8,17 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 /**
- * @class AligatorTest
- * AligatorTest adalah kelas yang digunakan untuk mengetes kelas Aligator
+ * @class LandWaterAnimalTest
+ * LandWaterAnimalTest adalah kelas yang digunakan untuk mengetes kelas abstrak LandWaterAnimal
  * @author Iftitakhul Zakiah
  */
-public class AligatorTest {
+public class LandWaterAnimalTest {
+
 	/**
-	 * Test method for {@link animal.Aligator#Aligator(int, int, int, int, boolean)}.
+	 * Test method for {@link animal.LandWaterAnimal#LandWaterAnimal(char, int)}.
 	 */
 	@Test
-	public void testAligator() {
+	public void testLandWaterAnimal() {
 		Aligator aligator = new Aligator (1, 10, 1, 100, true);
 		 assertEquals(1, aligator.getJmlMakanan());
 		 assertEquals(1, aligator.getID());
@@ -23,4 +27,5 @@ public class AligatorTest {
 		 assertEquals(1, aligator.getPosisiY());
 		 assertEquals('L', aligator.getInisial());
 	}
+
 }
