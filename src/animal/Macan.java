@@ -28,7 +28,7 @@ public class Macan extends LandAnimal implements Karnivora {
 	/**
 	 * Menampilkan makanan dari animal
 	 */
-	public void getTypeFood() {
+	public void seeMeatType() {
 		System.out.println("Macan eats meat");
 	}
 }

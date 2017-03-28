@@ -33,8 +33,8 @@ public class Iguana extends LandAnimal implements Herbivora {
 	/**
 	 * Menampilkan makanan dari animal
 	 */
-	public void getTypeFood() {
-		System.out.println("Iguana eats grass");
+	public void seeVeggieType() {
+		System.out.println("Iguana eats vegetables and fruits");
 	}
 
 }

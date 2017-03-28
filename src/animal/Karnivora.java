@@ -5,5 +5,8 @@ package animal;
  * @author Annisa Muzdalifa
  */
 public interface Karnivora {
-	public void getTypeFood();
+	/**
+	 * Mengetahui jenis daging yang dikonsumsi hewan. 
+	 */
+	public void seeMeatType();
 }

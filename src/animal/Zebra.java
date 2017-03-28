@@ -1,5 +1,9 @@
 package animal;
 
+/**
+ * @class Zebra turunan LandAnimal dan implement Herbivora
+ * @author Annisa Muzdalifa
+ */
 public class Zebra extends LandAnimal implements Herbivora {
 	private String aksi = "running";
 	private int rasio_makanan = 60;
@@ -23,12 +27,12 @@ public class Zebra extends LandAnimal implements Herbivora {
 	 * Menampilkan interaksi berupa suara animal ke layar
 	 */
 	public void interact() {
-		System.out.println("Macan: (" + aksi + ")");
+		System.out.println("Zebra: (" + aksi + ")");
 	}
 	/**
 	 * Menampilkan makanan dari animal
 	 */
-	public void getTypeFood() {
+	public void seeVeggieType() {
 		System.out.println("Zebra eats grass");
 	}
 

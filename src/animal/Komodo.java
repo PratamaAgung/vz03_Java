@@ -33,8 +33,8 @@ public class Komodo extends LandAnimal implements Karnivora {
 	/**
 	 * Menampilkan makanan dari animal
 	 */
-	public void getTypeFood() {
-		System.out.println("Komodo eats meat");
+	public void seeMeatType() {
+		System.out.println("Komodo eats any kind of meat");
 	}
 
 }

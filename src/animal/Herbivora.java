@@ -5,5 +5,8 @@ package animal;
  * @author Annisa Muzdalifa
  */
 public interface Herbivora {
-	public void getTypeFood(); 
+	/**
+	 * Mengetahui jenis sayuran yang dikonsumsi hewan
+	 */
+	public void seeVeggieType(); 
 }

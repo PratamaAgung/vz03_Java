@@ -50,9 +50,9 @@ public abstract class Animal {
   public int getPosisiX() {
   	return x;
   }
-  /** 
-    * @return y
-    */
+  /**
+   * @return y
+   */
   public int getPosisiY() {
   	return y;
   }

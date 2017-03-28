@@ -35,7 +35,7 @@ public class BadakCulaSatu extends LandAnimal implements Herbivora {
 	/**
 	 * implementasi getTypeFood dari kelas Herbivore.
 	 */
-	public void getTypeFood() {
-		System.out.println("BadakCulaSatu eats vegetable");
+	public void seeVeggieType() {
+		System.out.println("BadakCulaSatu eats grass");
 	}
 }

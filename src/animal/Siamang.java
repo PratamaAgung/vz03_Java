@@ -1,5 +1,9 @@
 package animal;
-
+/**
+ * @class Siamang turunan LandAnimal dan implement Omnivora
+ * @author Annisa Muzdalifa
+ *
+ */
 public class Siamang extends LandAnimal implements Omnivora {
 	private String suara = "Ooo Ooo";
 	private int rasio_makanan = 5;
@@ -28,7 +32,7 @@ public class Siamang extends LandAnimal implements Omnivora {
 	/**
 	 * Menampilkan makanan dari animal
 	 */
-	public void getTypeFood() {
-		System.out.println("Siamang eats vegetables and meat");
+	public void seeFoodType() {
+		System.out.println("Siamang eats lots of food and sometimes insect");
 	}
 }

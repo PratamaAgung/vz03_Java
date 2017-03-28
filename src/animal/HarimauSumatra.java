@@ -32,7 +32,7 @@ public class HarimauSumatra extends LandAnimal implements Karnivora {
 	/**
 	 * implementasi getTypeFood dari kelas Karnivora.
 	 */
-	public void getTypeFood() {
+	public void seeMeatType() {
 		System.out.println("HarimauSumatra eats meat");
 	}
 

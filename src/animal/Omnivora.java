@@ -5,5 +5,8 @@ package animal;
  * @author Annisa Muzdalifa
  */
 public interface Omnivora {
-	public void getTypeFood();
+	/**
+	 * Mengetahui jenis makanan yang dikonsumsi hewan
+	 */
+	public void seeFoodType();
 }

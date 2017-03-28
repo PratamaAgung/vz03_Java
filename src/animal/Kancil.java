@@ -33,7 +33,7 @@ public class Kancil extends LandAnimal implements Herbivora {
 	/**
 	 * Menampilkan makanan dari animal
 	 */
-	public void getTypeFood() {
+	public void seeVeggieType() {
 		System.out.println("Kancil eats grass");
 	}
 	

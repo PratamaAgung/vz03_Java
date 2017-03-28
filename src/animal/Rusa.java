@@ -1,5 +1,8 @@
 package animal;
-
+/**
+ * @class Rusa turunan LandAnimal dan implement Herbivora
+ * @author Annisa Muzdalifa
+ */
 public class Rusa extends LandAnimal implements Herbivora {
 	private String aksi = "flaunt horn";
 	private int rasio_makanan = 20;
@@ -23,12 +26,12 @@ public class Rusa extends LandAnimal implements Herbivora {
 	 * Menampilkan interaksi berupa suara animal ke layar
 	 */
 	public void interact() {
-		System.out.println("Macan: (" + aksi + ")");
+		System.out.println("Rusa: (" + aksi + ")");
 	}
 	/**
 	 * Menampilkan makanan dari animal
 	 */
-	public void getTypeFood() {
+	public void seeVeggieType() {
 		System.out.println("Rusa eats grass");
 	}
 }

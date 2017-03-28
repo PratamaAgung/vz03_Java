@@ -1,10 +1,6 @@
 package animal;
-
-;
-
 /** 
- * @class Bekantan
- * Kelas Bekantan turunan dari kelas LandAnimal meng-implement kelas Omnivora
+ * @class Bekantan turunan dari kelas LandAnimal meng-implement kelas Omnivora
  * @author Annisa Muzdalifa 
  */
 public class Bekantan extends LandAnimal implements Omnivora {
@@ -37,7 +33,7 @@ public class Bekantan extends LandAnimal implements Omnivora {
 	/**
 	 * implementasi getTypeFood dari kelas Omnivore.
 	 */
-	public void getTypeFood() {
-		System.out.println("Bekantan eats vegetable and meat");
+	public void seeFoodType() {
+		System.out.println("Bekantan eats lots of fruit and sometimes insects");
 	}
 }

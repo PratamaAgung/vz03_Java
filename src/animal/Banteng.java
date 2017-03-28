@@ -1,5 +1,9 @@
 package animal;
 
+/**
+ * @class Banteng turunan LandAnimal dan implement Herbivora
+ * @author Annisa Muzdalifa
+ */
 public class Banteng extends LandAnimal implements Herbivora {
 	private int rasio_makanan = 100;
 	private String aksi = "snort";
@@ -29,7 +33,7 @@ public class Banteng extends LandAnimal implements Herbivora {
 	/**
 	 * implementasi getTypeFood dari kelas Herbivore.
 	 */
-	public void getTypeFood() {
-		System.out.println("Banteng eats vegetable");
+	public void seeVeggieType() {
+		System.out.println("Banteng eats grass");
 	}
 }

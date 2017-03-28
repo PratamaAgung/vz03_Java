@@ -1,5 +1,9 @@
 package animal;
 
+/**
+ * @class OrangUtan turunan LandAnimal dan implement Omnivora
+ * @author Annisa Muzdalifa
+ */
 public class OrangUtan extends LandAnimal implements Omnivora {
 	private String suara = "Auooo";
 	private int rasio_makanan = 15;
@@ -28,8 +32,8 @@ public class OrangUtan extends LandAnimal implements Omnivora {
 	/**
 	 * Menampilkan makanan dari animal
 	 */
-	public void getTypeFood() {
-		System.out.println("OrangUtan eats vegetables and meat");
+	public void seeFoodType() {
+		System.out.println("OrangUtan eats lots of fruit and sometimes insects");
 	}
 
 }
