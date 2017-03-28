@@ -22,7 +22,7 @@ public class HiuKarpetTest {
 		HiuKarpet hiuKarpet = new HiuKarpet(1, 10, 1, 100, true);
 
 		  assertEquals(1, hiuKarpet.getJmlMakanan());
-		  assertEquals(1, hiuKarpet.getID());
+		  assertEquals(1, hiuKarpet.getId());
 		  assertEquals(true, hiuKarpet.isJinak());
 		  assertEquals(10, hiuKarpet.getPosisiX());
 		  assertEquals(1, hiuKarpet.getPosisiY());

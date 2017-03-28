@@ -20,7 +20,7 @@ public class GarudaTest {
 		Garuda garuda = new Garuda (1, 10, 1, 100, true);
 
 		  assertEquals(16, garuda.getJmlMakanan());
-		  assertEquals(1, garuda.getID());
+		  assertEquals(1, garuda.getId());
 		  assertEquals(true, garuda.isJinak());
 		  assertEquals(10, garuda.getPosisiX());
 		  assertEquals(1, garuda.getPosisiY());

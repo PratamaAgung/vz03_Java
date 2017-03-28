@@ -1,9 +1,11 @@
 package cell;
+import animal.*;
+import cage.*;
 import renderable.*;
 
 public abstract class Cell implements Renderable{
-	protected int cage;
-	protected int animal;
+	protected Cage cage;
+	protected Animal animal;
 	protected final char type;
 	protected final int absis;
 	protected final int ordinat;
@@ -15,11 +17,11 @@ public abstract class Cell implements Renderable{
 	 * @param _ordinat lokasi ordinat dari cell
 	 */
 	public Cell(char c, int _absis, int _ordinat) {
-		type=c;
-		absis=_absis;
-		ordinat=_ordinat;
-		cage= 0;
-		animal= 0;
+		type = c;
+		absis = _absis;
+		ordinat = _ordinat;
+		cage = null;
+		animal = null;
 	}
 	
 	/**
@@ -34,7 +36,7 @@ public abstract class Cell implements Renderable{
 	 * Getter dari data atribut cage
 	 * @return cage yang melingkupi cell
 	 */
-	public int getCage() {
+	public Cage getCage() {
 		return cage;
 	}
 	
@@ -42,15 +44,15 @@ public abstract class Cell implements Renderable{
 	 * Setter dari data aribut cage
 	 * @param _cage cage yang melingkupi cell
 	 */
-	public void setCage(int _cage) {
-		cage=_cage;
+	public void setCage(Cage _cage) {
+		cage = _cage;
 	}
 	
 	/**
 	 * Getter dari data atribut animal
 	 * @return animal yang berada pada cell
 	 */
-	public int getAnimal() {
+	public Animal getAnimal() {
 		return animal;
 	}
 	
@@ -58,15 +60,15 @@ public abstract class Cell implements Renderable{
 	 * Setter dari data atribut animal
 	 * @param _animal animal yang berada pada cell
 	 */
-	public void setAnimal(int _animal) {
-		animal=_animal;
+	public void setAnimal(Animal _animal) {
+		animal = _animal;
 	}
 	
 	/**
 	 * Penghapus dari keberadaan animal pada suatu cell
 	 */
 	public void eraseAnimal() {
-		animal=0;
+		animal = null;
 	}
 	
 	/**

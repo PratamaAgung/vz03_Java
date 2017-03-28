@@ -10,9 +10,11 @@ public class Zoo {
 	private Vector<Cell> exit;
 	
 	public Zoo(int _width, int _length) {
-		width=_width;
-		length=_length;
+		width = _width;
+		length = _length;
 		cellArray = new Cell[length][width];
+		exit = new Vector<Cell>(25);
+		entrance = new Vector<Cell>(25);
 	}
 	
 	public void setCell(int _absis, int _ordinat, Cell cell) {

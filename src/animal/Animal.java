@@ -35,7 +35,7 @@ public abstract class Animal {
   /**
     * @return ID
     */
-  public int getID() {
+  public int getId() {
   	return id;
   }
   /** 
@@ -89,14 +89,14 @@ public abstract class Animal {
   /** 
     * @param _x Nilai posisi x animal yang ingin dimasukkan
     */
-  public void setX(int _x) {
-  	x = _x;
+  public void setX(int absis) {
+  	x = absis;
   }
   /** 
    * @param _y Nilai posisi y animal yang ingin dimasukkan
    */
-  public void setY(int _y) {
-  	y = _y;
+  public void setY(int ordinat) {
+  	y = ordinat;
   }
   /** 
    * @param c nilai habitat animal yang ingin ditambahkan ke type
@@ -105,7 +105,8 @@ public abstract class Animal {
   	type += 'c';
   }
   /** 
-   * menampilkan inisial animal ke layar
+   * menampilk
+   * an inisial animal ke layar
    */
   public void render() {
   	System.out.println(inisial);

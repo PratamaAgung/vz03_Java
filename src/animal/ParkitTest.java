@@ -22,7 +22,7 @@ public class ParkitTest {
 		Parkit parkit = new Parkit(1, 10, 1, 100, true);
 
 		  assertEquals(20, parkit.getJmlMakanan());
-		  assertEquals(1, parkit.getID());
+		  assertEquals(1, parkit.getId());
 		  assertEquals(true, parkit.isJinak());
 		  assertEquals(10, parkit.getPosisiX());
 		  assertEquals(1, parkit.getPosisiY());

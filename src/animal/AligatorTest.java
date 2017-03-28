@@ -17,7 +17,7 @@ public class AligatorTest {
 	public void testAligator() {
 		Aligator aligator = new Aligator (1, 10, 1, 100, true);
 		 assertEquals(1, aligator.getJmlMakanan());
-		 assertEquals(1, aligator.getID());
+		 assertEquals(1, aligator.getId());
 		 assertEquals(true, aligator.isJinak());
 		 assertEquals(10, aligator.getPosisiX());
 		 assertEquals(1, aligator.getPosisiY());

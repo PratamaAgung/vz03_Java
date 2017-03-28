@@ -18,7 +18,7 @@ public class BuayaTest {
 		Buaya buaya = new Buaya (1, 10, 1, 100, true);
 
 		  assertEquals(0, buaya.getJmlMakanan());
-		  assertEquals(1, buaya.getID());
+		  assertEquals(1, buaya.getId());
 		  assertEquals(true, buaya.isJinak());
 		  assertEquals(10, buaya.getPosisiX());
 		  assertEquals(1, buaya.getPosisiY());

@@ -22,7 +22,7 @@ public class NuriTest {
 		Nuri nuri = new Nuri(1, 10, 1, 100, true);
 
 		  assertEquals(50, nuri.getJmlMakanan());
-		  assertEquals(1, nuri.getID());
+		  assertEquals(1, nuri.getId());
 		  assertEquals(true, nuri.isJinak());
 		  assertEquals(10, nuri.getPosisiX());
 		  assertEquals(1, nuri.getPosisiY());

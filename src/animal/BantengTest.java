@@ -10,7 +10,7 @@ public class BantengTest {
 	public void testBanteng() {
 		Banteng banteng = new Banteng(1, 10, 1, 10, true);
 		assertEquals(0, banteng.getJmlMakanan());
-		assertEquals(1, banteng.getID());
+		assertEquals(1, banteng.getId());
 		assertEquals(true, banteng.isJinak());
 		assertEquals(10, banteng.getPosisiX());
 		assertEquals(1, banteng.getPosisiY());

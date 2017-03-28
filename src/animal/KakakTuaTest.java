@@ -22,7 +22,7 @@ public class KakakTuaTest {
 		KakakTua kakakTua = new KakakTua(1, 10, 1, 100, true);
 
 		  assertEquals(33, kakakTua.getJmlMakanan());
-		  assertEquals(1, kakakTua.getID());
+		  assertEquals(1, kakakTua.getId());
 		  assertEquals(true, kakakTua.isJinak());
 		  assertEquals(10, kakakTua.getPosisiX());
 		  assertEquals(1, kakakTua.getPosisiY());

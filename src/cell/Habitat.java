@@ -16,11 +16,11 @@ public abstract class Habitat extends Cell{
 	 * Method untuk mencetak habitat ke layar
 	 */
 	public void render() {
-		if (animal!=0) {
+		if (animal!=null) {
 			
 		}
 		else {
-			if(cage!=0) {
+			if(cage!=null) {
 				System.out.print((char) type-32); 
 			}
 			else {

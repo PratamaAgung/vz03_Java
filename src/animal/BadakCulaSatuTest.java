@@ -10,7 +10,7 @@ public class BadakCulaSatuTest {
 	public void testBadakCulaSatu() {
 		BadakCulaSatu badak = new BadakCulaSatu(1, 10, 1, 100, true);
 		assertEquals(0, badak.getJmlMakanan());
-		assertEquals(1, badak.getID());
+		assertEquals(1, badak.getId());
 		assertEquals(true, badak.isJinak());
 		assertEquals(10, badak.getPosisiX());
 		assertEquals(1, badak.getPosisiY());

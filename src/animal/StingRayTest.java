@@ -22,7 +22,7 @@ public class StingRayTest {
 		StingRay stingRay = new StingRay(1, 10, 1, 100, true);
 
 		  assertEquals(10, stingRay.getJmlMakanan());
-		  assertEquals(1, stingRay.getID());
+		  assertEquals(1, stingRay.getId());
 		  assertEquals(true, stingRay.isJinak());
 		  assertEquals(10, stingRay.getPosisiX());
 		  assertEquals(1, stingRay.getPosisiY());

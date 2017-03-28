@@ -22,7 +22,7 @@ public class HiuMartilTest {
 		HiuMartil hiuMartil = new HiuMartil(1, 10, 1, 100, true);
 
 		  assertEquals(1, hiuMartil.getJmlMakanan());
-		  assertEquals(1, hiuMartil.getID());
+		  assertEquals(1, hiuMartil.getId());
 		  assertEquals(true, hiuMartil.isJinak());
 		  assertEquals(10, hiuMartil.getPosisiX());
 		  assertEquals(1, hiuMartil.getPosisiY());

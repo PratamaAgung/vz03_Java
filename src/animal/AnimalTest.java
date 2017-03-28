@@ -10,7 +10,7 @@ public class AnimalTest {
 	public void testAnimal() {
 		Animal a = new BadakCulaSatu(1, 10, 1, 100, true);
 		assertEquals('C', a.getInisial());
-		assertEquals(2, a.getID());
+		assertEquals(2, a.getId());
 	}
 
 	@Test

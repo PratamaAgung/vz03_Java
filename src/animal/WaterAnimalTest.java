@@ -22,7 +22,7 @@ public class WaterAnimalTest {
 		MantaRay mantaRay = new MantaRay(1, 10, 1, 100, true);
 
 		  assertEquals(0, mantaRay.getJmlMakanan());
-		  assertEquals(1, mantaRay.getID());
+		  assertEquals(1, mantaRay.getId());
 		  assertEquals(true, mantaRay.isJinak());
 		  assertEquals(10, mantaRay.getPosisiX());
 		  assertEquals(1, mantaRay.getPosisiY());

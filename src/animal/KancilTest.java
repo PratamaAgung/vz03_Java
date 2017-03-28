@@ -11,7 +11,7 @@ public class KancilTest {
 		Kancil o = new Kancil(1, 10, 1, 100, true);
 		  
 		assertEquals(50, o.getJmlMakanan());
-		assertEquals(1, o.getID());
+		assertEquals(1, o.getId());
 		assertEquals(true, o.isJinak());
 		assertEquals(10, o.getPosisiX());
 		assertEquals(1, o.getPosisiY());
