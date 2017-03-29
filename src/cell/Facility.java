@@ -1,14 +1,17 @@
 package cell;
 
+/**
+ * @author Pratamamia Agung Prihatmaja.
+ */
 public abstract class Facility extends Cell{
-	
-	/**
-	 * Konstruktor kelas facility
-	 * @param c type dari facility
-	 * @param _absis lokasi absis dari facility
-	 * @param _ordinat lokasi ordinat dari facility
-	 */
-	public Facility(char c, int _absis, int _ordinat){
-		super(c, _absis, _ordinat);
-	}
+  
+  /**
+   * Konstruktor kelas facility.
+   * @param kar type dari facility.
+   * @param absis lokasi absis dari facility.
+   * @param ordinat lokasi ordinat dari facility.
+   */
+  public Facility(char kar, int absis, int ordinat){
+    super(kar, absis, ordinat);
+  }
 }

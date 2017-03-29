@@ -1,13 +1,17 @@
 package cell;
 
-public class Exit extends Road{
-	
-	/**
-	 * Konstruktor kelas exit
-	 * @param _absis lokasi absis dari exit
-	 * @param _ordinat lokasi ordinat dari exit
-	 */
-	public Exit(int _absis, int _ordinat) {
-		super(-1, _absis, _ordinat);
-	}
+/**
+ * @author Pratamamia Agung Prihatmaja.
+ */
+
+public class Exit extends Road {
+  
+  /**
+   * Konstruktor kelas exit.
+   * @param absis lokasi absis dari exit.
+   * @param ordinat lokasi ordinat dari exit.
+   */
+  public Exit(int absis, int ordinat) {
+    super(-1, absis, ordinat);
+  }
 }

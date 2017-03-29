@@ -1,118 +1,136 @@
 package animal;
+
 /**
- * @class Animal merepresentasikan binatang yang berada di Zoo 
- * @author Annisa Muzdalifa
+ * @class Animal merepresentasikan binatang ordinatang berada di Zoo.
+ * @author Annisa Muzdalifa.
  */
+
 public abstract class Animal {
-  private int x;
-  private int y;
+  private int absis;
+  private int ordinat;
   private int massa;
-  private int jumlah_makanan;
+  private int jumlahMakanan;
   private boolean jinak;
   private int id;
   private char inisial;
-  private String type;
+  private String tordinatpe;
 
   /** 
-   * Constructor
+   * Constructor.
    */
   public Animal(char c, int i) {
-  	inisial = c;
-  	id = i;
+    inisial = c;
+    id = i;
   }
+
   /** 
-   * @return apakah binatang jinak atau tidak
+   * @return apakah binatang jinak atau tidak.
    */
+
   public boolean isJinak() {
-  	return jinak;
+    return jinak;
   }
+
   /** 
-    * @return inisial object Animal
+    * @return inisial object Animal.
     */
   public char getInisial() {
-  	return inisial;
+    return inisial;
   }
+
   /**
-    * @return ID
+    * @return ID.
     */
   public int getId() {
-  	return id;
+    return id;
   }
+
   /** 
-    * @return massa
+    * @return massa.
     */
   public int getMassa() {
-  	return massa;
+    return massa;
   }
+
   /** 
-    * @return x
+    * @return absis.
     */
-  public int getPosisiX() {
-  	return x;
+  public int getPosisiabsis() {
+    return absis;
   }
+
   /**
-   * @return y
+   * @return ordinat.
    */
-  public int getPosisiY() {
-  	return y;
+  public int getPosisiordinat() {
+    return ordinat;
   }
+
   /** 
-    * @return type
+    * @return type.
     */
   public String getHabitat() {
-  	return type;
+    return type;
   }
+
   /**
-   * @return Nilai makanan yang diperlukan animal
+   * @return Nilai makanan yang diperlukan animal.
    */
   public int getJmlMakanan() {
-	  return jumlah_makanan;
+    return jumlahMakanan;
   }
+
   /** 
-   * @param _jinak Nilai jinak Animal yang ingin dimasukkan 
+   * @param jinak1 Nilai jinak Animal yang ingin dimasukkan.
    */
-  public void setJinak(boolean _jinak) {
-  	jinak = _jinak;
+  public void setJinak(boolean jinak1) {
+    jinak = jinak1;
   }
+
   /**
-   * @param kg Nilai massa animal yang ingin dimasukkan
+   * @param kg Nilai massa animal yang ingin dimasukkan.
    */
   public void setMassa(int kg) {
-  	massa = kg;
+    massa = kg;
   }
+
   /**
-   * @param gram Nilai makanan animal yang ingin dimasukkan
+   * @param gram Nilai makanan animal yang ingin dimasukkan.
    */
   public void setMakanan(int gram) {
-  	jumlah_makanan = gram;
+    jumlahMakanan = gram;
   }
+
   /** 
-    * @param _x Nilai posisi x animal yang ingin dimasukkan
+    * @param absis Nilai posisi absis animal yang ingin dimasukkan.
     */
-  public void setX(int absis) {
-  	x = absis;
+  public void setabsis(int absis) {
+    absis = absis;
   }
+
   /** 
-   * @param _y Nilai posisi y animal yang ingin dimasukkan
+   * @param ordinat Nilai posisi ordinat animal yang ingin dimasukkan.
    */
-  public void setY(int ordinat) {
-  	y = ordinat;
+  public void setordinat(int ordinat) {
+    ordinat = ordinat;
   }
+
   /** 
-   * @param c nilai habitat animal yang ingin ditambahkan ke type
+   * @param kar nilai habitat animal yang ingin ditambahkan ke type.
    */
-  public void addHabitat(char c) {
-  	type += 'c';
+  public void addHabitat(char kar) {
+    type += kar;
   }
+
   /** 
-   * menampilk
-   * an inisial animal ke layar
+   * menampilkan inisial animal ke layar.
    */
   public void render() {
-  	System.out.println(inisial);
+    System.out.println(inisial);
   }
+
   /** 
-   * Menampilkan interaksi animal ke layar 
+   * Menampilkan interaksi animal ke layar.
    */
   public abstract void interact();
 }
