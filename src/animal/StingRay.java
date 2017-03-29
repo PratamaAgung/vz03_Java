@@ -2,7 +2,7 @@ package animal;
 
 /**
  * @class StingRay.
- * Kelas StingRay turunan dari kelas WaterAnimal meng-implement kelas Karnivora.
+   Kelas StingRay turunan dari kelas WaterAnimal meng-implement kelas Karnivora.
  * @author Iftitakhul Zakiah.
  */
 public class StingRay extends WaterAnimal implements Karnivora {
@@ -23,7 +23,7 @@ public class StingRay extends WaterAnimal implements Karnivora {
     super.setX(absis);
     super.setY(ordinat);
     super.setJinak(jinak);
-    super.setMakanan(massa/rasioMakanan);
+    super.setMakanan(massa / rasioMakanan);
   }
 
   /**

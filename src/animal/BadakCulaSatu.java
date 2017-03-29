@@ -2,7 +2,7 @@ package animal;
 
 /** 
  * @class BadakCulaSatu.
- * Kelas BadakCulaSatu turunan dari kelas LandAnimal meng-implement kelas Herbivora.
+   Kelas BadakCulaSatu turunan dari kelas LandAnimal meng-implement kelas Herbivora.
  * @author Annisa Muzdalifa.
  */
 
@@ -21,10 +21,10 @@ public class BadakCulaSatu extends LandAnimal implements Herbivora {
   public BadakCulaSatu(int id, int absis, int ordinat, int massa, boolean jinak) {
     super('C',id);
     super.setMassa(massa);
-    super.setX(x);
-    super.setY(y);
+    super.setX(absis);
+    super.setY(ordinat);
     super.setJinak(jinak);
-    super.setMakanan(massa/rasioMakanan); 
+    super.setMakanan(massa / rasioMakanan); 
   }
 
   /**

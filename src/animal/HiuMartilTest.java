@@ -1,12 +1,11 @@
 package animal;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
 /**
- * @class HiuMartilTest.
- * HiuMartilTest adalah kelas yang digunakan untuk mengetes kelas HiuMartil.
+ * @class HiuMartilTest adalah kelas yang digunakan untuk mengetes kelas HiuMartil.
  * @author Iftitakhul Zakiah.
  */
 

@@ -3,7 +3,7 @@ package cell;
 /**
  * @author Pratamamia Agung Prihatmaja.
  */
-public abstract class Habitat extends Cell{
+public abstract class Habitat extends Cell {
   
   /**
    * Konstruktor kelas Cell.
@@ -11,7 +11,7 @@ public abstract class Habitat extends Cell{
    * @param absis lokasi absis dari cell.
    * @param ordinat lokasi ordinat dari cell.
    */
-  public Habitat (char type, int absis, int ordinat) {
+  public Habitat(char type, int absis, int ordinat) {
     super(type, absis, ordinat);
   }
   
@@ -19,10 +19,8 @@ public abstract class Habitat extends Cell{
    * Method untuk mencetak habitat ke layar.
    */
   public void render() {
-    if (animal != null) {
-      
-    } else {
-      if(cage != null) {
+    if (animal == null) {
+      if (cage != null) {
         System.out.print((char) type - 32); 
       } else {
         System.out.print(type);

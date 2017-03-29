@@ -4,7 +4,7 @@ package cell;
  * @author Pratamamia Agung Prihatmaja.
  */
 
-public class Restaurant extends Facility{
+public class Restaurant extends Facility {
   
   /**
    * Konstruktor.
@@ -19,6 +19,6 @@ public class Restaurant extends Facility{
    * Method untuk mencetak restaurant ke layar.
    */
   public void render() {
-    System.out.print("\u001B[34m"+ type+ "\u001B[0m");
+    System.out.print("\u001B[34m" + type + "\u001B[0m");
   }
 }

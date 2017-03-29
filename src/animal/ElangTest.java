@@ -1,6 +1,6 @@
 package animal;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -15,8 +15,7 @@ public class ElangTest {
    */
   @Test
   public void testElang() {
-    Elang elang = new Elang (1, 10, 1, 100, true);
-
+    Elang elang = new Elang(1, 10, 1, 100, true);
     assertEquals(20, elang.getJmlMakanan());
     assertEquals(1, elang.getId());
     assertEquals(true, elang.isJinak());

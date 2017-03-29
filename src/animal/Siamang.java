@@ -23,7 +23,7 @@ public class Siamang extends LandAnimal implements Omnivora {
     super.setX(x);
     super.setY(y);
     super.setJinak(jinak);
-    super.setMakanan(massa/rasioMakanan);
+    super.setMakanan(massa / rasioMakanan);
   }
   
   /**

@@ -23,7 +23,7 @@ public class Bekantan extends LandAnimal implements Omnivora {
     super.setX(absis);
     super.setY(ordinat);
     super.setJinak(jinak);
-    super.setMakanan(massa/rasioMakanan);  
+    super.setMakanan(massa / rasioMakanan);  
   }
 
   /**

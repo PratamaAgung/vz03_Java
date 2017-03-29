@@ -1,12 +1,11 @@
 package animal;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
 /**
- * @class NuriTest.
- * NuriTest adalah kelas yang digunakan untuk mengetes kelas Nuri.
+ * @class NuriTest adalah kelas yang digunakan untuk mengetes kelas Nuri.
  * @author Iftitakhul Zakiah.
  */
 

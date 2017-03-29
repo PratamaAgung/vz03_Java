@@ -2,7 +2,7 @@ package animal;
 
 /** 
  * @class FlyingAnimal turunan dari kelas Animal.
- * menunjukkan animal yang dapat terbang.
+   menunjukkan animal yang dapat terbang.
  * @author Iftitakhul Zakiah.
  */
 public abstract class FlyingAnimal extends Animal {

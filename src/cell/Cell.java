@@ -1,6 +1,6 @@
 package cell;
 
-import animal.*;
+import animal.Animal;
 import cage.Cage;
 import renderable.Renderable;
 

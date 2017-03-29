@@ -1,12 +1,11 @@
 package animal;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
 /**
- * @class GarudaTest.
- * GarudaTest adalah kelas yang digunakan untuk mengetes kelas Garuda.
+ * @class GarudaTest adalah kelas yang digunakan untuk mengetes kelas Garuda.
  * @author Iftitakhul Zakiah.
  */
 public class GarudaTest {
@@ -16,15 +15,12 @@ public class GarudaTest {
    */
   @Test
   public void testGaruda() {
-    
-    Garuda garuda = new Garuda (1, 10, 1, 100, true);
-
-      assertEquals(16, garuda.getJmlMakanan());
-      assertEquals(1, garuda.getId());
-      assertEquals(true, garuda.isJinak());
-      assertEquals(10, garuda.getPosisiX());
-      assertEquals(1, garuda.getPosisiY());
-      assertEquals('G', garuda.getInisial());
+    Garuda garuda = new Garuda(1, 10, 1, 100, true);
+    assertEquals(16, garuda.getJmlMakanan());
+    assertEquals(1, garuda.getId());
+    assertEquals(true, garuda.isJinak());
+    assertEquals(10, garuda.getPosisiX());
+    assertEquals(1, garuda.getPosisiY());
+    assertEquals('G', garuda.getInisial());
   }
-
 }

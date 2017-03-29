@@ -18,7 +18,7 @@ public class Banteng extends LandAnimal implements Herbivora {
    */
   public Banteng(int id, int absis, int ordinat, int massa, boolean jinak) {
     super('A',id);
-    super.setMakanan(massa/rasioMakanan);
+    super.setMakanan(massa / rasioMakanan);
     super.setMassa(massa);
     super.setJinak(jinak);
     super.setX(absis);

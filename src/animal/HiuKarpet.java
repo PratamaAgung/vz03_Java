@@ -2,28 +2,28 @@ package animal;
 
 /**
  * @class HiuKarpet.
- * Kelas HiuKarpet turunan dari kelas WaterAnimal meng-implement kelas Karnivora.
+   Kelas HiuKarpet turunan dari kelas WaterAnimal meng-implement kelas Karnivora.
  * @author Iftitakhul Zakiah.
  */
 public class HiuKarpet extends WaterAnimal implements Karnivora {
-  private int rasio_makanan = 100;
+  private int rasioMakanan = 100;
   private String aksi = "burying in sand";
 
   /**
    * Constructor.
    * @param id Id animal yang diciptakan.
-   * @param x posisi animal di sumbu x.
-   * @param y posisi animal di sumbu y.
+   * @param absis posisi animal di sumbu x.
+   * @param ordinat posisi animal di sumbu y.
    * @param massa massa animal dalam satuan gram.
    * @param jinak sifat animal yang menyatakan jinak atau tidak.
    */
-  public HiuKarpet(int id, int x, int y, int massa, boolean jinak) {
+  public HiuKarpet(int id, int absis, int ordinat, int massa, boolean jinak) {
     super('V',id);
     super.setMassa(massa);
-    super.setX(x);
-    super.setY(y);
+    super.setX(absis);
+    super.setY(ordinat);
     super.setJinak(jinak);
-    super.setMakanan(massa/rasio_makanan); 
+    super.setMakanan(massa / rasioMakanan); 
   }
 
   /**

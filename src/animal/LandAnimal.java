@@ -2,7 +2,7 @@ package animal;
 
 /** 
  * @class LandAnimal turunan dari kelas Animal.
- * menunjukkan animal yang tinggal di darat.
+   menunjukkan animal yang tinggal di darat.
  * @author Annisa Muzdalifa.
  */
 public abstract class LandAnimal extends Animal {

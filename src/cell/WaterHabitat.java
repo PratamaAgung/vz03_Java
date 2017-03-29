@@ -4,7 +4,7 @@ package cell;
   * Kelas yang mewakili habitat air.
    * @author Pratamamia Agung Prihatmaja.
   */
-public class WaterHabitat extends Habitat{
+public class WaterHabitat extends Habitat {
   
   /**
    * Konstruktor kelas WaterHabitat.

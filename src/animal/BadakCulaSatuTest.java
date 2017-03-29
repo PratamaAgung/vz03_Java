@@ -1,6 +1,6 @@
 package animal;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -16,5 +16,4 @@ public class BadakCulaSatuTest {
     assertEquals(1, badak.getPosisiY());
     assertEquals('C', badak.getInisial());
   }
-
 }

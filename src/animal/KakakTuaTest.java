@@ -1,12 +1,12 @@
 package animal;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
 /**
  * @class KakakTuaTest.
- * KakakTuaTest adalah kelas yang digunakan untuk mengetes kelas KakakTua.
+   KakakTuaTest adalah kelas yang digunakan untuk mengetes kelas KakakTua.
  * @author Iftitakhul Zakiah.
  */
 public class KakakTuaTest {
@@ -17,13 +17,11 @@ public class KakakTuaTest {
   @Test
   public void testKakakTua() {
     KakakTua kakakTua = new KakakTua(1, 10, 1, 100, true);
-
-      assertEquals(33, kakakTua.getJmlMakanan());
-      assertEquals(1, kakakTua.getId());
-      assertEquals(true, kakakTua.isJinak());
-      assertEquals(10, kakakTua.getPosisiX());
-      assertEquals(1, kakakTua.getPosisiY());
-      assertEquals('P', kakakTua.getInisial());
+    assertEquals(33, kakakTua.getJmlMakanan());
+    assertEquals(1, kakakTua.getId());
+    assertEquals(true, kakakTua.isJinak());
+    assertEquals(10, kakakTua.getPosisiX());
+    assertEquals(1, kakakTua.getPosisiY());
+    assertEquals('P', kakakTua.getInisial());
   }
-
 }

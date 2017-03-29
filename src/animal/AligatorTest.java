@@ -1,12 +1,12 @@
 package animal;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
 /**
  * @class AligatorTest.
- * AligatorTest adalah kelas yang digunakan untuk mengetes kelas Aligator.
+   AligatorTest adalah kelas yang digunakan untuk mengetes kelas Aligator.
  * @author Iftitakhul Zakiah.
  */
 
@@ -16,7 +16,7 @@ public class AligatorTest {
    */
   @Test
   public void testAligator() {
-    Aligator aligator = new Aligator (1, 10, 1, 100, true);
+    Aligator aligator = new Aligator(1, 10, 1, 100, true);
     assertEquals(1, aligator.getJmlMakanan());
     assertEquals(1, aligator.getId());
     assertEquals(true, aligator.isJinak());

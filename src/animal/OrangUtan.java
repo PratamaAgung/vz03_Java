@@ -21,7 +21,7 @@ public class OrangUtan extends LandAnimal implements Omnivora {
     super.setX(absis);
     super.setY(ordinat);
     super.setJinak(jinak);
-    super.setMakanan(massa/rasioMakanan);
+    super.setMakanan(massa / rasioMakanan);
   }
 
   /**

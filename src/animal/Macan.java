@@ -17,7 +17,7 @@ public class Macan extends LandAnimal implements Karnivora {
     super.setX(absis);
     super.setY(ordinat);
     super.setJinak(jinak);
-    super.setMakanan(massa/rasioMakanan);
+    super.setMakanan(massa / rasioMakanan);
   }
 
   /**

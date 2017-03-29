@@ -3,8 +3,7 @@ package cell;
  * @author Pratamamia Agung Prihatmaja.
  */
 
-public class LandHabitat extends Habitat{
-
+public class LandHabitat extends Habitat {
   /**
    * Konstruktor kelas LandHabitat.
    * @param absis lokasi absis dari LandHabitat.

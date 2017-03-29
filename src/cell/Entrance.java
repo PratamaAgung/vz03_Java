@@ -3,7 +3,7 @@ package cell;
 /**
  * @author Pratamamia Agung Prihatmaja.
  */
-public class Entrance extends Road{
+public class Entrance extends Road {
   
   /**
    * Konstruktor entrance.

@@ -3,7 +3,7 @@ package cell;
 /**
  * @author Pratamamia Agung Prihatmaja.
  */
-public class Road extends Facility{
+public class Road extends Facility {
   private final int jenis;
   
   /**
@@ -39,6 +39,6 @@ public class Road extends Facility{
    * Method untuk mencetak road ke layar.
    */
   public void render() {
-    System.out.print("\u001B[32m"+type+"\u001B[0m");
+    System.out.print("\u001B[32m" + type + "\u001B[0m");
   }
 }

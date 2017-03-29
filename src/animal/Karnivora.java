@@ -1,4 +1,4 @@
-	package animal;
+package animal;
 
 /**
  * Karnivora merepresentasikan sifat hewan pemakan daging.

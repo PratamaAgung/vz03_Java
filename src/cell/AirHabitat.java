@@ -5,7 +5,7 @@ package cell;
  * @author Pratamamia Agung Prihatmaja.
  *
  */
-public class AirHabitat extends Habitat{
+public class AirHabitat extends Habitat {
   
   /**
    * Konstruktor kelas AirHabitat.

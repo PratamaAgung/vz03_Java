@@ -13,7 +13,7 @@ public abstract class Animal {
   private boolean jinak;
   private int id;
   private char inisial;
-  private String tordinatpe;
+  private String type;
 
   /** 
    * Constructor.
@@ -55,14 +55,14 @@ public abstract class Animal {
   /** 
     * @return absis.
     */
-  public int getPosisiabsis() {
+  public int getPosisiX() {
     return absis;
   }
 
   /**
    * @return ordinat.
    */
-  public int getPosisiordinat() {
+  public int getPosisiY() {
     return ordinat;
   }
 
@@ -102,17 +102,17 @@ public abstract class Animal {
   }
 
   /** 
-    * @param absis Nilai posisi absis animal yang ingin dimasukkan.
+    * @param absis1 Nilai posisi absis animal yang ingin dimasukkan.
     */
-  public void setabsis(int absis) {
-    absis = absis;
+  public void setX(int absis1) {
+    absis = absis1;
   }
 
   /** 
-   * @param ordinat Nilai posisi ordinat animal yang ingin dimasukkan.
+   * @param ordinat1 Nilai posisi ordinat animal yang ingin dimasukkan.
    */
-  public void setordinat(int ordinat) {
-    ordinat = ordinat;
+  public void setY(int ordinat1) {
+    ordinat = ordinat1;
   }
 
   /** 

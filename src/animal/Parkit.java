@@ -2,7 +2,7 @@ package animal;
 
 /**
  * @class Parkit.
- * Kelas Parkit turunan dari kelas FlyingAnimal meng-implement kelas Herbivora.
+   Kelas Parkit turunan dari kelas FlyingAnimal meng-implement kelas Herbivora.
  * @author Iftitakhul Zakiah.
  */
 public class Parkit extends FlyingAnimal implements Herbivora {
@@ -23,7 +23,7 @@ public class Parkit extends FlyingAnimal implements Herbivora {
     super.setX(absis);
     super.setY(ordinat);
     super.setJinak(jinak);
-    super.setMakanan(massa/rasioMakanan);  
+    super.setMakanan(massa / rasioMakanan);  
   }
 
   /**
