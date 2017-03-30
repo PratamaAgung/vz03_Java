@@ -5,7 +5,7 @@ package cell;
  */
 public class Road extends Facility {
   private final int jenis;
-  
+
   /**
    * Konstruktor dengan 2 parameter, untuk jenis jalan biasa.
    * @param absis lokasi absis dari Road.
@@ -15,7 +15,7 @@ public class Road extends Facility {
     super(' ', absis, ordinat);
     jenis = 0;
   }
-  
+
   /**
    * Konstruktor dengan 3 parameter, untuk jenis entrance dan exit.
    * @param type menyatakan jenis dari Road.
@@ -26,7 +26,7 @@ public class Road extends Facility {
     super(' ', absis, ordinat);
     jenis = type;
   }
-  
+
   /**
    * Getter dari data member jenis.
    * @return integer yang melambangkan jenis dari Road.
@@ -34,7 +34,7 @@ public class Road extends Facility {
   public int getJenis() {
     return jenis;
   }
-  
+
   /**
    * Method untuk mencetak road ke layar.
    */

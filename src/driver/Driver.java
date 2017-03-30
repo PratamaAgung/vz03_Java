@@ -66,7 +66,7 @@ public class Driver {
     try {
       FileReader fin = null;
       JSONParser parser = new JSONParser();
-      fin = new FileReader("src/main/resource/map.json"); 
+      fin = new FileReader("resources/map.json");
       JSONObject obj = (JSONObject) parser.parse(fin);
       mapWidth = new Long((long) obj.get("ZooWidth")).intValue();
       mapLength = new Long((long) obj.get("ZooLength")).intValue();
@@ -91,7 +91,7 @@ public class Driver {
    * @param id is dari animal.
    * @return animal yang telah dibentuk.
    */
-  private Animal animalBuilder(int absis, int ordinat, int massa, String nama, 
+  private Animal animalBuilder(int absis, int ordinat, int massa, String nama,
       boolean jinak, int id) {
     Animal animalCreated = null;
     if (nama.equals("Elang")) {
@@ -105,7 +105,7 @@ public class Driver {
     } else if (nama.equals("Rusa")) {
       animalCreated = new Rusa(id, absis, ordinat, massa, jinak);
     } else if (nama.equals("Parkit")) {
-      animalCreated = new Parkit(id, absis, ordinat, massa, jinak); 
+      animalCreated = new Parkit(id, absis, ordinat, massa, jinak);
     } else if (nama.equals("Garuda")) {
       animalCreated = new Garuda(id, absis, ordinat, massa, jinak);
     } else if (nama.equals("HarimauSumatra")) {
@@ -143,7 +143,7 @@ public class Driver {
     }
     return animalCreated;
   }
-  
+
   /**
    * Method untuk memparsing animal dari file external.
    * @param zoo merepresentasikan kelas Zoo.
@@ -154,13 +154,13 @@ public class Driver {
     try {
       FileReader fin = null;
       JSONParser parser = new JSONParser();
-      
-      fin = new FileReader("src/main/resource/map.json"); 
+
+      fin = new FileReader("resources/map.json");
       JSONObject obj = (JSONObject) parser.parse(fin);
 
       JSONArray animalArray = (JSONArray) obj.get("AnimalList");
       Iterator<JSONObject> allAnimal = animalArray.iterator();
-    
+
       int absis;
       int ordinat;
       int massa;
@@ -176,7 +176,7 @@ public class Driver {
         massa = new Long((long) currAnimal.get("Massa")).intValue();
         id = new Long((long) currAnimal.get("Id")).intValue();
         jinak = (boolean) currAnimal.get("Jinak");
-        
+
         Animal animal = animalBuilder(absis, ordinat, massa, nama, jinak, id);
         animalHandler.addAnimal(animal);
         zoo.getCell(absis, ordinat).setAnimal(animal);
@@ -196,7 +196,7 @@ public class Driver {
     }
     return animalHandler;
   }
-  
+
   /**
    * Method untuk memparsing cage dari file external.
    * @return CageHandler yang telah terisi.
@@ -206,13 +206,13 @@ public class Driver {
     try {
       FileReader fin = null;
       JSONParser parser = new JSONParser();
-      
-      fin = new FileReader("src/main/resource/map.json"); 
+
+      fin = new FileReader("resources/map.json");
       JSONObject obj = (JSONObject) parser.parse(fin);
 
       JSONArray cageArray = (JSONArray) obj.get("CageList");
       Iterator<JSONObject> allCage = cageArray.iterator();
-    
+
       char habitat;
       int id;
       while (allCage.hasNext()) {
@@ -231,7 +231,7 @@ public class Driver {
     }
     return cageHandler;
   }
-  
+
   /**
    * Method untuk memparsing cell dari file external.
    * @param cageHandler CageHandler.
@@ -242,22 +242,21 @@ public class Driver {
     try {
       FileReader fin = null;
       JSONParser parser = new JSONParser();
-      
-      fin = new FileReader("src/main/resource/map.json"); 
+
+      fin = new FileReader("resources/map.json");
       JSONObject obj = (JSONObject) parser.parse(fin);
 
       JSONArray cellArray = (JSONArray) obj.get("CellList");
       Iterator<JSONObject> allCell = cellArray.iterator();
-      
+
       Cage cage;
       int absis;
       int ordinat;
       String type;
       boolean entrance;
       boolean exit;
-      
+
       zoo = new Zoo(mapLength,mapWidth);
-      
       while (allCell.hasNext()) {
         JSONObject currCell = (JSONObject) allCell.next();
         JSONObject lokasi = (JSONObject) currCell.get("Lokasi");
@@ -265,9 +264,8 @@ public class Driver {
         ordinat = new Long((long) lokasi.get("y")).intValue();
         type = (String) currCell.get("type");
         int cageId = new Long((long) currCell.get("Cage")).intValue();
-     
         Cell sel = null;
-              
+
         if (type.equals("water")) {
           sel = new WaterHabitat(absis,ordinat);
         } else if (type.equals("land")) {
@@ -310,7 +308,7 @@ public class Driver {
     }
     return zoo;
   }
-  
+
   /**
    * Method untuk menampilkan virtual zoo pada layar.
    * @param zoo yang akan ditampilkan layar.
@@ -332,49 +330,53 @@ public class Driver {
     System.out.println("==================================================");
     System.out.println("              V I R T U A L  Z O O");
     System.out.println("==================================================");
+
     if (left >= 0 && up >= 0 && right < zoo.getWidth() && down < zoo.getLength()) {
       for (int i = up; i <= down; i++) {
         for (int j = left; j <= right; j++) {
-          zoo.getCell(j,i).render();
+          if (zoo.getCell(j,i).getAnimal() == null) {
+        	System.out.print(zoo.getCell(j, i).getType());
+          } else {
+        	System.out.print(zoo.getCell(j,i).getAnimal().getInisial());
+          }
         }
         System.out.println();
       }
     }
-    reader.close();
   }
-  
+
   /**
    * Method untuk mengisnisiasi tour.
    * @param zoo yang akan dilakukan tour.
    */
   public void initPosition(Zoo zoo) {
     Random rand = new Random(System.currentTimeMillis());
-    int idx = rand.nextInt(zoo.nbEntrance());
-    currX = zoo.getEntrance(idx).getAbsis();
-    currY = zoo.getEntrance(idx).getOrdinat();
-    
+    int idx = rand.nextInt(2);
+    currX = 4;
+    currY = 0;
+    System.out.print(currX + " " + currY);
     for (int i = 0; i < zoo.getLength(); i++) {
       for (int j = 0; j < zoo.getWidth(); j++) {
         visited[i][j] = false;
       }
     }
   }
-  
+
   public int getPosX() {
     return currX;
   }
-  
+
   public int getPosY() {
     return currY;
   }
-  
+
   /**
    * Method untuk melakukan tour virtual zoo.
    * @param zoo yang akan dilakukan tour.
    */
   public void tourVirtualZoo(Zoo zoo) {
     Random rand = new Random(System.currentTimeMillis());
-    
+
     System.out.println("==================================================");
     System.out.println("                 VIRTUAL ZOO TOUR");
     System.out.println("==================================================");
@@ -383,10 +385,10 @@ public class Driver {
       int init = rand.nextInt(4);
       boolean found = false;
       int i = 0;
-      
+
       while (!found && i < 4) {
         if (init == 0) {
-          if ((currY - 1 >= 0) && (zoo.getCell(currX, currY - 1).getType() == ' ') 
+          if ((currY - 1 >= 0) && (zoo.getCell(currX, currY - 1).getType() == ' ')
               && (!visited[currY - 1][currX])) {
             found = true;
             visited[currY][currX] = true;
@@ -395,7 +397,7 @@ public class Driver {
             init++;
           }
         } else if (init == 1) {
-          if ((currX + 1 < zoo.getWidth()) && (zoo.getCell(currX + 1, currY).getType() == ' ') 
+          if ((currX + 1 < zoo.getWidth()) && (zoo.getCell(currX + 1, currY).getType() == ' ')
               && (!visited[currY][currX + 1])) {
             found = true;
             visited[currY][currX] = true;
@@ -404,7 +406,7 @@ public class Driver {
             init++;
           }
         } else if (init == 2) {
-          if ((currY + 1 < zoo.getLength()) && (zoo.getCell(currX, currY + 1).getType() == ' ') 
+          if ((currY + 1 < zoo.getLength()) && (zoo.getCell(currX, currY + 1).getType() == ' ')
               && (!visited[currY + 1][currX])) {
             found = true;
             visited[currY][currX] = true;
@@ -413,7 +415,7 @@ public class Driver {
             init++;
           }
         } else if (init == 3) {
-          if ((currX - 1 >= 0) && (zoo.getCell(currX - 1, currY).getType() == ' ') 
+          if ((currX - 1 >= 0) && (zoo.getCell(currX - 1, currY).getType() == ' ')
               && (!visited[currY][currX - 1])) {
             found = true;
             visited[currY][currX] = true;
@@ -436,7 +438,7 @@ public class Driver {
         }
         if (currX - 1 >= 0 && zoo.getCell(currX - 1, currY).getAnimal() != null) {
           zoo.getCell(currX - 1, currY).getAnimal().interact();
-        } 
+        }
         if (currY + 1 < zoo.getLength() && zoo.getCell(currX, currY + 1).getAnimal() != null) {
           zoo.getCell(currX, currY + 1).getAnimal().interact();
         }
@@ -452,7 +454,7 @@ public class Driver {
       }
     }
   }
-  
+
   /**
    * Method untuk melakukan perpindahan animal.
    * @param zoo tempat animal berada.
@@ -467,38 +469,38 @@ public class Driver {
       int cage = zoo.getCell(x, y).getCage().getId();
 
       if (init == 0) {
-        if (y - 1 >= 0 && zoo.getCell(x, y - 1).getCage() != null 
-            && zoo.getCell(x, y - 1).getCage().getId() == cage 
+        if (y - 1 >= 0 && zoo.getCell(x, y - 1).getCage() != null
+            && zoo.getCell(x, y - 1).getCage().getId() == cage
             && zoo.getCell(x, y - 1).getAnimal() == null) {
           animalHandler.getAnimal(i).setY(y - 1);
           zoo.getCell(x, y).setAnimal(null);
           zoo.getCell(x, y - 1).setAnimal(animalHandler.getAnimal(i));
         }
       } else if (init == 1) {
-        if (x + 1 < zoo.getWidth() && zoo.getCell(x + 1, y).getCage() != null 
-            && zoo.getCell(x + 1, y).getCage().getId() == cage 
+        if (x + 1 < zoo.getWidth() && zoo.getCell(x + 1, y).getCage() != null
+            && zoo.getCell(x + 1, y).getCage().getId() == cage
             && zoo.getCell(x + 1, y).getAnimal() == null) {
           animalHandler.getAnimal(i).setX(x + 1);
           zoo.getCell(x, y).setAnimal(null);
           zoo.getCell(x + 1, y).setAnimal(animalHandler.getAnimal(i));
         }
       } else if (init == 2) {
-        if (y + 1 < zoo.getLength() && zoo.getCell(x, y + 1).getCage() != null 
-            && zoo.getCell(x, y + 1).getCage().getId() == cage 
+        if (y + 1 < zoo.getLength() && zoo.getCell(x, y + 1).getCage() != null
+            && zoo.getCell(x, y + 1).getCage().getId() == cage
             && zoo.getCell(x, y + 1).getAnimal() == null) {
           animalHandler.getAnimal(i).setY(y + 1);
           zoo.getCell(x, y).setAnimal(null);
           zoo.getCell(x, y + 1).setAnimal(animalHandler.getAnimal(i));
         }
       } else if (init == 3) {
-        if (x - 1 >= 0 && zoo.getCell(x - 1, y).getCage() != null 
-            && zoo.getCell(x - 1, y).getCage().getId() == cage 
+        if (x - 1 >= 0 && zoo.getCell(x - 1, y).getCage() != null
+            && zoo.getCell(x - 1, y).getCage().getId() == cage
             && zoo.getCell(x - 1, y).getAnimal() == null) {
           animalHandler.getAnimal(i).setX(x - 1);
           zoo.getCell(x, y).setAnimal(null);
           zoo.getCell(x - 1, y).setAnimal(animalHandler.getAnimal(i));
         }
       }
-    } 
+    }
   }
 }

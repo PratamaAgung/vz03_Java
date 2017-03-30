@@ -16,13 +16,16 @@ public class Main {
   public static void main(String[] args) {
     Driver driver = new Driver();
     int option;
-    
+
     CageHandler cageHandler = new CageHandler();
     cageHandler = driver.parseCage();
-  
+
     Zoo zoo;
     zoo = driver.parseCell(cageHandler);
-    
+    for(int i=0; i< zoo.nbEntrance(); i++) {
+    	System.out.println(zoo.getEntrance(i).getAbsis() + " " + zoo.getEntrance(i).getOrdinat());
+    }
+
     AnimalHandler animalHandler = new AnimalHandler();
     animalHandler = driver.parseAnimal(zoo);
     System.out.println("Masukkan option Anda");
@@ -30,7 +33,7 @@ public class Main {
     System.out.println("2. Tour zoo");
     System.out.println("3. Jumlah makanan zoo");
     System.out.println("4. Keluar");
-    
+
     boolean finished = false;
     Scanner reader = new Scanner(System.in);
     while (!finished) {
@@ -49,7 +52,7 @@ public class Main {
       } else {
         System.out.println("Not an option");
       }
-      
+
     }
     reader.close();
   }
