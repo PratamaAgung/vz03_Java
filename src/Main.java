@@ -22,9 +22,6 @@ public class Main {
 
     Zoo zoo;
     zoo = driver.parseCell(cageHandler);
-    for(int i=0; i< zoo.nbEntrance(); i++) {
-    	System.out.println(zoo.getEntrance(i).getAbsis() + " " + zoo.getEntrance(i).getOrdinat());
-    }
 
     AnimalHandler animalHandler = new AnimalHandler();
     animalHandler = driver.parseAnimal(zoo);
